@@ -16,7 +16,7 @@ session_start();
 <body>
     <?php
     session_destroy();
-    echo '<meta http-equiv="refresh" content="60; url=signup.html">';
+    echo '<meta http-equiv="refresh" content="1; url=signup.html">';
     // echo '<progress max=100 style="height: 30px;"><strong>Progress: 60% done.</strong></progress><br>';
     //       echo '<span class="itext">Logging out please wait!...</span>';
           ?>
