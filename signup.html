@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Signup - Travel</title>
+    <meta name="description" content="">
+    <!-- 
+Travel Template
+http://www.templatemo.com/tm-409-travel
+-->
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="templatemo">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_misc.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+
+    <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script src="./js/ajax.js">
+    </script>
+    <link rel="icon" type="image/x-icon" href="./images/admin.png">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+    <div class="site-header">
+        <div class="container">
+            <div class="main-header">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-10">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="images/logo.png" alt="travel html5 template" title="travel html5 template">
+                            </a>
+                        </div> <!-- /.logo -->
+                    </div> <!-- /.col-md-4 -->
+                    <div class="col-md-8 col-sm-6 col-xs-2">
+                        <div class="main-menu">
+                            <ul class="visible-lg visible-md">
+                                <li><a href="index.php">Home</a></li>
+                                <li><a href="./destination.php">Destination</a></li>
+                                <li><a href="gallery.php">Gallery</a></li>
+                                <li><a href="feedback.php">Feedback</a></li>
+                                <li class="active"><a href="signup.html">Signup</a></li>
+                            </ul>
+                            <a href="#" class="toggle-menu visible-sm visible-xs">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div> <!-- /.main-menu -->
+                    </div> <!-- /.col-md-8 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.main-header -->
+            <div class="row">
+                <div class="col-md-12 visible-sm visible-xs">
+                    <div class="menu-responsive">
+                        <ul>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="./destination.php">Destination</a></li>
+                            <li><a href="gallery.php">Gallery</a></li>
+                            <li><a href="feedback.php">Feedback</a></li>
+                            <li class="active"><a href="signup.html">Signup</a></li>
+                        </ul>
+                    </div> <!-- /.menu-responsive -->
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.site-header -->
+
+    <div class="page-top" id="templatemo_about">
+    </div> <!-- /.page-header -->
+
+    <div class="middle-content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 col-8 col-md-offset-2 col-offset-2">
+                    <div class="contact-form">
+                        <!-- signup -->
+                        <form name="signup-form" class="signup-form" id="contactform" action="signup.php" method="post">
+                    <center>
+                        <h3 style="text-shadow: 2px;" class="widget-title">Signup</h3>
+                    </center>
+                            <p>
+                                <input name="fname" type="text" id="fname" placeholder="First Name" required />
+                            </p>
+                            <p>
+                                <input name="lname" type="text" id="lname" placeholder="Lastname" required />
+                            </p>
+                            <p>
+                                <input style="margin-bottom: 4px;" name="uname" type="text" id="uname" required minlength="8" maxlength="16" oninput="checkUsername()"placeholder="User Name" />
+                            </p>
+                            <div id="availability" class="text-center text-danger"></div>
+                            <p>
+                                <input name="pass" type="password" id="name" placeholder="Password" required   />
+                            </p>
+                            <p>
+                                <input name="place" type="text" id="name" placeholder="Place" required />
+                            </p>
+                            <p>
+                                <input name="mob" type="number" id="name" placeholder="Mob" required minlength="10" maxlength="10" />
+                            </p>
+                            <p>
+                                <input name="email" type="text" id="email" placeholder="Email" required />
+                            </p>
+                            <input type="submit" class="mainBtn" name="signbtn" id="signbtn" value="Signup" />
+                            <p class="text-center message">
+                                <span>Already Registerd? <a href="#">Login</a></span>
+                            </p>
+                        </form>
+                        <!-- Login -->
+                        <form name="signin-form" class="signin-form" id="signinform" action="Login.php" method="post">
+                            <center>
+                                <h3 style="text-shadow: 2px;" class="widget-title">Login</h3>
+                            </center>
+                            <p>
+                                <input name="uname" type="text" id="uname" placeholder="User Name" />
+                            </p>
+                            <p>
+                                <input name="pass" type="password" id="pass" placeholder="Password" />
+                            </p>
+                            <input type="submit" class="mainBtn" name="submit" value="Login" />
+                            <p class="text-center message">
+                                <span>Not Registerd? <a href="#">Signup</a></span>
+                            </p>
+                            </form>
+                    </div>
+                    <!-- /.contact-form -->
+                </div>
+            </div>
+        </div> <!-- /.container -->
+    </div> <!-- /.middle-content -->
+
+    <div class="partner-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                        <img src="images/partners/partner1.png" alt="">
+                    </div> <!-- /.partner-item -->
+                </div> <!-- /.col-md-2 -->
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                        <img src="images/partners/partner2.png" alt="">
+                    </div> <!-- /.partner-item -->
+                </div> <!-- /.col-md-2 -->
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                        <img src="images/partners/partner3.png" alt="">
+                    </div> <!-- /.partner-item -->
+                </div> <!-- /.col-md-2 -->
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                        <img src="images/partners/partner1.png" alt="">
+                    </div> <!-- /.partner-item -->
+                </div> <!-- /.col-md-2 -->
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                        <img src="images/partners/partner2.png" alt="">
+                    </div> <!-- /.partner-item -->
+                </div> <!-- /.col-md-2 -->
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item last">
+                        <img src="images/partners/partner3.png" alt="">
+                    </div> <!-- /.partner-item -->
+                </div> <!-- /.col-md-2 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.partner-list -->
+
+
+
+    <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                    </div>
+                </div> <!-- /.col-md-4 -->
+                <div class="col-md-4 col-sm-4">
+                    <div class="copyright">
+                        <span>Copyright &copy; 2014 <a href="#">Company Name</a></span>
+                    </div>
+                </div> <!-- /.col-md-4 -->
+                <div class="col-md-4 col-sm-4">
+                    <ul class="social-icons">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                        <li><a href="#" class="fa fa-flickr"></a></li>
+                        <li><a href="#" class="fa fa-rss"></a></li>
+                    </ul>
+                </div> <!-- /.col-md-4 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
+    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!-- templatemo 409 travel -->
+</body>
+
+</html>
